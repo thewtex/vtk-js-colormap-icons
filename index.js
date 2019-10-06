@@ -10,8 +10,8 @@ const colorMaps = vtkColorMaps
 const body = document.getElementsByTagName('body')[0]
 
 const canvas = document.createElement('canvas')
-const width = 240
-const height = 20
+const width = 60
+const height = 5
 canvas.setAttribute('width', width);
 canvas.setAttribute('height', height);
 body.appendChild(canvas)
