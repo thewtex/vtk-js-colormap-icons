@@ -72,12 +72,8 @@ ColorPresetNames.forEach((presetName) => {
 
   tableBody.appendChild(row)
 
-  moduleContent += `image = new Image();
-image.width = ${width};
-image.height = ${height};
-image.src = '${image.src}';
-ColorPresetIcons['${presetName}'] = image;
-
+  moduleContent += `
+ColorPresetIcons['${presetName}'] = '${image.src}';
 `
 
 })
