@@ -1,5 +1,7 @@
 import vtkColorTransferFunction from 'vtk.js/Sources/Rendering/Core/ColorTransferFunction'
 import vtkColorMaps from 'vtk.js/Sources/Rendering/Core/ColorTransferFunction/ColorMaps.json'
+import ColorMaps from 'vtk.js/Sources/Rendering/Core/ColorTransferFunction/ColorMaps'
+import ColorPresetNames from './ColorPresetNames.js'
 
 const colorMaps = vtkColorMaps
   .filter((p) => p.RGBPoints)
@@ -8,8 +10,8 @@ const colorMaps = vtkColorMaps
 const body = document.getElementsByTagName('body')[0]
 
 const canvas = document.createElement('canvas')
-const width = 80
-const height = 30
+const width = 240
+const height = 20
 canvas.setAttribute('width', width);
 canvas.setAttribute('height', height);
 body.appendChild(canvas)
@@ -27,8 +29,10 @@ let image = null;
 
 `
 
-colorMaps.forEach((preset) => {
-  const presetName = preset.Name
+ColorPresetNames.forEach((presetName) => {
+  const preset = ColorMaps.getPresetByName(presetName)
+//colorMaps.forEach((preset) => {
+  //const presetName = preset.Name
   colorTransferFunction.setMappingRange(range[0], range[1])
   colorTransferFunction.applyColorMap(preset)
   const rgba = colorTransferFunction.getUint8Table(
