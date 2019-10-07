@@ -25,8 +25,6 @@ const tableBody = document.createElement('tbody')
 
 let moduleContent = `const ColorPresetIcons = new Map()
 
-let image = null;
-
 `
 
 ColorPresetNames.forEach((presetName) => {
@@ -73,7 +71,7 @@ ColorPresetNames.forEach((presetName) => {
   tableBody.appendChild(row)
 
   moduleContent += `
-ColorPresetIcons['${presetName}'] = '${image.src}';
+ColorPresetIcons.set('${presetName}', '${image.src}');
 `
 
 })
