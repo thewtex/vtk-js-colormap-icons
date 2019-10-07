@@ -1,11 +1,11 @@
 // Like vtkColorMaps.rgbPresetNames, but more selective
 const ColorPresetNames = [
-  'Grayscale',
-  'X Ray',
   'Viridis (matplotlib)',
   'Plasma (matplotlib)',
   'Inferno (matplotlib)',
   'Magma (matplotlib)',
+  'Grayscale',
+  'X Ray',
   'magenta',
   'blue2cyan',
   'gray_Matlab',
@@ -22,8 +22,8 @@ const ColorPresetNames = [
   'Black-Body Radiation',
 
   'Cool to Warm',
-  'Cool to Warm (Extended)',
   'Warm to Cool',
+  'Cool to Warm (Extended)',
   'Warm to Cool (Extended)',
   'Blue to Red Rainbow',
   'Red to Blue Rainbow',
@@ -42,9 +42,9 @@ const ColorPresetNames = [
   'Green-Blue Asymmetric Divergent (62Blbc)',
   'Muted Blue-Green',
 
-  'Blues',
-  'Greens',
   'Reds',
+  'Greens',
+  'Blues',
   'Purples',
   'Oranges',
   'PuBu',
