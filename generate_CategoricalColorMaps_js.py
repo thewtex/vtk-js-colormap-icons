@@ -35,11 +35,13 @@ with open('CategoricalColors.js', 'w') as fp:
         fp.write("CategoricalColors.set('{}', [\n".format(color['Name']))
         rgb_values = color['IndexedColors']
         for rgb in rgb_values:
-            fp.write('  [')
-            fp.write(rgb[0])
+            fp.write('[')
+            fp.write(str(int(float(rgb[0]) * 255.0 + 0.5)))
             fp.write(',')
-            fp.write(rgb[1])
+            fp.write(str(int(float(rgb[1]) * 255.0 + 0.5)))
             fp.write(',')
-            fp.write(rgb[2])
+            fp.write(str(int(float(rgb[2]) * 255.0 + 0.5)))
             fp.write('],\n')
         fp.write('])\n')
+
+    fp.write('\nexport default CategoricalColors;\n')
