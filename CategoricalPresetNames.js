@@ -1,4 +1,4 @@
-const CategoricalNames = [
+const CategoricalPresetNames = [
   'glasbey',
   'glasbey_light',
   'glasbey_warm',
@@ -8,4 +8,4 @@ const CategoricalNames = [
   'glasbey_cool',
 ];
 
-export default CategoricalNames;
+export default CategoricalPresetNames;

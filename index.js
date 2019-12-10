@@ -6,7 +6,7 @@ import ColorMaps from 'vtk.js/Sources/Rendering/Core/ColorTransferFunction/Color
 import ColorMapPresetNames from './ColorMapPresetNames.js'
 
 import CategoricalColors from './CategoricalColors.js'
-import CategoricalNames from './CategoricalNames.js'
+import CategoricalPresetNames from './CategoricalPresetNames.js'
 
 const colorMaps = vtkColorMaps
   .filter((p) => p.RGBPoints)
@@ -106,7 +106,7 @@ let lutModuleContent = `const LookupTablePresetIcons = new Map()
 
 `
 
-CategoricalNames.forEach((presetName) => {
+CategoricalPresetNames.forEach((presetName) => {
   const preset = CategoricalColors.get(presetName)
   const colors = CategoricalColors.get(presetName);
 
