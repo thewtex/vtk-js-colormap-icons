@@ -102,7 +102,7 @@ const lookupTable = vtkLookupTable.newInstance()
 const lutTable = document.createElement('table')
 const lutTableBody = document.createElement('tbody')
 
-let lutModuleContent = `const LookupTablePresetIcons = new Map()
+let lutModuleContent = `const CategoricalPresetIcons = new Map()
 
 `
 
@@ -175,19 +175,19 @@ CategoricalPresetNames.forEach((presetName) => {
   lutTableBody.appendChild(row)
 
   lutModuleContent += `
-LookupTablePresetIcons.set('${presetName}', '${image.src}');
+CategoricalPresetIcons.set('${presetName}', '${image.src}');
 `
 
 })
 
 lutModuleContent += `
-export default LookupTablePresetIcons;
+export default CategoricalPresetIcons;
 `
 
 lutTable.appendChild(lutTableBody)
 body.appendChild(lutTable)
 const lutLabel = document.createElement('label')
-lutLabel.innerHTML = "LookupTablePresetIcons.js: <br>"
+lutLabel.innerHTML = "CategoricalPresetIcons.js: <br>"
 body.appendChild(lutLabel)
 const lutPresetIconsModule = document.createElement('textarea')
 lutPresetIconsModule.setAttribute('rows', '150')
