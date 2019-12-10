@@ -3,7 +3,7 @@ import vtkLookupTable from 'vtk.js/Sources/Common/Core/LookupTable';
 import vtkDataArray from 'vtk.js/Sources/Common/Core/DataArray';
 import vtkColorMaps from 'vtk.js/Sources/Rendering/Core/ColorTransferFunction/ColorMaps.json'
 import ColorMaps from 'vtk.js/Sources/Rendering/Core/ColorTransferFunction/ColorMaps'
-import ColorPresetNames from './ColorPresetNames.js'
+import ColorMapPresetNames from './ColorMapPresetNames.js'
 
 import CategoricalColors from './CategoricalColors.js'
 import CategoricalNames from './CategoricalNames.js'
@@ -28,11 +28,11 @@ const colorTransferFunction = vtkColorTransferFunction.newInstance()
 const table = document.createElement('table')
 const tableBody = document.createElement('tbody')
 
-let moduleContent = `const ColorPresetIcons = new Map()
+let moduleContent = `const ColorMapPresetIcons = new Map()
 
 `
 
-ColorPresetNames.forEach((presetName) => {
+ColorMapPresetNames.forEach((presetName) => {
   const preset = ColorMaps.getPresetByName(presetName)
 
   colorTransferFunction.setMappingRange(range[0], range[1])
@@ -75,19 +75,19 @@ ColorPresetNames.forEach((presetName) => {
   tableBody.appendChild(row)
 
   moduleContent += `
-ColorPresetIcons.set('${presetName}', '${image.src}');
+ColorMapPresetIcons.set('${presetName}', '${image.src}');
 `
 
 })
 
 moduleContent += `
-export default ColorPresetIcons;
+export default ColorMapPresetIcons;
 `
 
 table.appendChild(tableBody)
 body.appendChild(table)
 const label = document.createElement('label')
-label.innerHTML = "ColorPresetIcons.js: <br>"
+label.innerHTML = "ColorMapPresetIcons.js: <br>"
 body.appendChild(label)
 const colorPresetIconsModule = document.createElement('textarea')
 colorPresetIconsModule.setAttribute('rows', '350')
