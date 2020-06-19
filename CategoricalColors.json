@@ -7718,5 +7718,15 @@
 ]
 ],
 "Name": "glasbey_light"
-}
+},
+{
+"IndexedColors": [
+[
+"0.0",
+"0.0",
+"0.0"
+]
+],
+"Name": "modulate_dark"
+},
 ]

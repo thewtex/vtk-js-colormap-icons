@@ -7,6 +7,7 @@ const CategoricalPresetNames = [
   'glasbey_bw',
   'glasbey_dark',
   'glasbey_cool',
+  'modulate_dark',
 ];
 
 export default CategoricalPresetNames;
