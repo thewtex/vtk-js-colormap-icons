@@ -136,6 +136,7 @@ CategoricalPresetNames.forEach((presetName) => {
   for (let i = 0; i < categoricalColors; i++) {
     const offset = i * colorWidth * 4
     const color = colors[i]
+    console.log(color)
     for (let j = 0; j < colorWidth; j++) {
       rgba[offset + j*4] = color[0]
       rgba[offset + j*4 + 1] = color[1]
